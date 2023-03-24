@@ -5,7 +5,7 @@ import msRest from "@azure/ms-rest-js";
 import Face from "@azure/cognitiveservices-face";
 import { v4 as uuid } from 'uuid';
 
-const key = "1acd88ba5fb247a18a18d2b8fdb62cc5";
+const key = process.env.KEY;
 const endpoint = "https://teste-controle-frota.cognitiveservices.azure.com/";
 
 const credentials = new msRest.ApiKeyCredentials({ inHeader: { 'Ocp-Apim-Subscription-Key': key } });
